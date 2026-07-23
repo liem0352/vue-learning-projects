@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="100%" role="img" aria-labelledby="tuTitle tuDesc">
+  <title id="tuTitle">命令行用法 - npm install 与 npm run dev</title>
+  <desc id="tuDesc">终端卡片:cd 进入子项目、npm install 安装依赖、npm run dev 启动开发服务器,默认监听 http://localhost:5173。</desc>
+
+  <defs>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Roboto, Helvetica, Arial, sans-serif; }
+      .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="200" rx="20" fill="#F7F5F0"/>
+
+  <!-- Terminal window -->
+  <g transform="translate(48 30)">
+    <!-- Window body -->
+    <rect x="0" y="0" width="1104" height="140" rx="10" fill="#FFFFFF" stroke="#2F7A5B" stroke-width="1"/>
+    <!-- Title bar (no traffic-light dots, just label) -->
+    <rect x="0" y="0" width="1104" height="28" rx="10" fill="#2F7A5B"/>
+    <rect x="0" y="18" width="1104" height="10" fill="#2F7A5B"/>
+    <text x="20" y="19" class="mono" font-size="12" font-weight="700" letter-spacing="1" fill="#FFFFFF">SHELL · vue-router-practice</text>
+    <text x="1084" y="19" text-anchor="end" class="mono" font-size="11" fill="#FFFFFF">bash</text>
+
+    <!-- Command lines -->
+    <g transform="translate(24 56)" class="mono" font-size="14" fill="#1A1A1A">
+      <!-- Line 1: cd -->
+      <text x="0" y="0" fill="#B8860B" font-weight="700">$</text>
+      <text x="18" y="0">cd vue-router-practice</text>
+
+      <!-- Line 2: npm install -->
+      <text x="0" y="24" fill="#B8860B" font-weight="700">$</text>
+      <text x="18" y="24">npm install</text>
+
+      <!-- Line 3: npm run dev -->
+      <text x="0" y="48" fill="#B8860B" font-weight="700">$</text>
+      <text x="18" y="48">npm run dev</text>
+
+      <!-- Line 4: output -->
+      <text x="0" y="72" fill="#2F7A5B">→</text>
+      <text x="18" y="72" fill="#8B8680">Local:  http://localhost:5173</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" width="100%" role="img" aria-labelledby="ftTitle ftDesc">
+  <title id="ftTitle">README 签名 - 作者 liem · 学习练习</title>
+  <desc id="footerDesc">README 制作签名与项目元信息:作者 liem、技术栈 Vue 3 + Vite、用途 学习练习。</desc>
+
+  <defs>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Roboto, Helvetica, Arial, sans-serif; }
+      .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="100" rx="14" fill="#F7F5F0"/>
+
+  <!-- Top divider -->
+  <line x1="48" y1="22" x2="1152" y2="22" stroke="#E5E2DC" stroke-width="1"/>
+
+  <!-- Left: README MADE WITH -->
+  <g transform="translate(48 42)">
+    <text x="0" y="14" class="mono" font-size="11" letter-spacing="2" fill="#8B8680">README MADE WITH</text>
+    <text x="0" y="38" class="mono" font-size="13" fill="#1A1A1A">beautify-github-readme + design-taste-frontend</text>
+  </g>
+
+  <!-- Right: project meta -->
+  <g transform="translate(1152 42)">
+    <text x="0" y="14" text-anchor="end" class="mono" font-size="11" letter-spacing="2" fill="#8B8680">PROJECT META</text>
+    <text x="0" y="38" text-anchor="end" class="mono" font-size="13" fill="#1A1A1A">作者 liem · Vue 3 + Vite · 学习练习</text>
+  </g>
+</svg>

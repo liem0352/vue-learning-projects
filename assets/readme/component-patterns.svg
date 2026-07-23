@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" role="img" aria-labelledby="cpTitle cpDesc">
+  <title id="cpTitle">组件模式示意 - Props / Emit / Slot / Composable</title>
+  <desc id="cpDesc">Vue 3 四种组件通信模式:Props 父到子传数据、Emit 子到父发事件、Slot 内容分发(本仓库 slot-practice 覆盖)、Composable 逻辑复用。</desc>
+
+  <defs>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Roboto, Helvetica, Arial, sans-serif; }
+      .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    </style>
+    <marker id="cpArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2F7A5B"/>
+    </marker>
+    <marker id="cpArrowGold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#B8860B"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="320" rx="20" fill="#F7F5F0"/>
+
+  <!-- Four pattern cards. Layout: 4 cards w=252, gap=18, margin=69 -->
+
+  <!-- Card 1: Props -->
+  <g transform="translate(69 30)">
+    <rect x="0" y="0" width="252" height="260" rx="12" fill="#FFFFFF" stroke="#2F7A5B" stroke-width="1"/>
+    <!-- Title -->
+    <text x="126" y="36" text-anchor="middle" class="sans" font-size="20" font-weight="700" fill="#1A1A1A">Props</text>
+    <text x="126" y="58" text-anchor="middle" class="mono" font-size="11" letter-spacing="1" fill="#8B8680">PARENT TO CHILD</text>
+
+    <!-- Diagram: Parent box -> arrow down -> Child box -->
+    <g transform="translate(56 84)">
+      <rect x="0" y="0" width="140" height="36" rx="6" fill="#F7F5F0" stroke="#2F7A5B" stroke-width="1"/>
+      <text x="70" y="22" text-anchor="middle" class="mono" font-size="12" fill="#1A1A1A">Parent</text>
+      <!-- Arrow down with label -->
+      <path d="M 70 40 L 70 80" fill="none" stroke="#2F7A5B" stroke-width="1.5" marker-end="url(#cpArrow)"/>
+      <rect x="40" y="52" width="60" height="18" rx="3" fill="#FFFFFF" stroke="#2F7A5B" stroke-width="1"/>
+      <text x="70" y="65" text-anchor="middle" class="mono" font-size="10" fill="#2F7A5B">props</text>
+      <rect x="0" y="84" width="140" height="36" rx="6" fill="#2F7A5B"/>
+      <text x="70" y="106" text-anchor="middle" class="mono" font-size="12" fill="#FFFFFF">Child</text>
+    </g>
+
+    <!-- Description -->
+    <line x1="20" y1="222" x2="232" y2="222" stroke="#E5E2DC" stroke-width="1"/>
+    <text x="126" y="244" text-anchor="middle" class="sans" font-size="12" fill="#8B8680">父组件向子组件传数据</text>
+  </g>
+
+  <!-- Card 2: Emit -->
+  <g transform="translate(339 30)">
+    <rect x="0" y="0" width="252" height="260" rx="12" fill="#FFFFFF" stroke="#2F7A5B" stroke-width="1"/>
+    <text x="126" y="36" text-anchor="middle" class="sans" font-size="20" font-weight="700" fill="#1A1A1A">Emit</text>
+    <text x="126" y="58" text-anchor="middle" class="mono" font-size="11" letter-spacing="1" fill="#8B8680">CHILD TO PARENT</text>
+
+    <!-- Diagram: Parent box, Child box, arrow up from Child to Parent -->
+    <g transform="translate(56 84)">
+      <rect x="0" y="0" width="140" height="36" rx="6" fill="#F7F5F0" stroke="#2F7A5B" stroke-width="1"/>
+      <text x="70" y="22" text-anchor="middle" class="mono" font-size="12" fill="#1A1A1A">Parent</text>
+      <!-- Arrow up from child to parent -->
+      <path d="M 70 84 L 70 44" fill="none" stroke="#2F7A5B" stroke-width="1.5" marker-end="url(#cpArrow)"/>
+      <rect x="40" y="52" width="60" height="18" rx="3" fill="#FFFFFF" stroke="#2F7A5B" stroke-width="1"/>
+      <text x="70" y="65" text-anchor="middle" class="mono" font-size="10" fill="#2F7A5B">emit</text>
+      <rect x="0" y="84" width="140" height="36" rx="6" fill="#2F7A5B"/>
+      <text x="70" y="106" text-anchor="middle" class="mono" font-size="12" fill="#FFFFFF">Child</text>
+    </g>
+
+    <line x1="20" y1="222" x2="232" y2="222" stroke="#E5E2DC" stroke-width="1"/>
+    <text x="126" y="244" text-anchor="middle" class="sans" font-size="12" fill="#8B8680">子组件向父组件发事件</text>
+  </g>
+
+  <!-- Card 3: Slot (highlighted - covered in this repo) -->
+  <g transform="translate(609 30)">
+    <rect x="0" y="0" width="252" height="260" rx="12" fill="#FFFFFF" stroke="#B8860B" stroke-width="1.5"/>
+    <text x="126" y="36" text-anchor="middle" class="sans" font-size="20" font-weight="700" fill="#1A1A1A">Slot</text>
+    <text x="126" y="58" text-anchor="middle" class="mono" font-size="11" letter-spacing="1" fill="#B8860B">CONTENT DISTRIBUTION</text>
+
+    <!-- Diagram: Parent with slot placeholder <- Child content -->
+    <g transform="translate(36 84)">
+      <!-- Parent outer box -->
+      <rect x="0" y="0" width="140" height="120" rx="6" fill="#F7F5F0" stroke="#2F7A5B" stroke-width="1"/>
+      <text x="70" y="16" text-anchor="middle" class="mono" font-size="10" fill="#1A1A1A">Parent</text>
+      <!-- Slot placeholder (dashed) -->
+      <rect x="14" y="26" width="112" height="34" rx="4" fill="none" stroke="#B8860B" stroke-width="1" stroke-dasharray="4 3"/>
+      <text x="70" y="47" text-anchor="middle" class="mono" font-size="10" fill="#B8860B">slot</text>
+      <!-- Caption inside parent -->
+      <text x="70" y="84" text-anchor="middle" class="mono" font-size="9" fill="#8B8680">注入点</text>
+      <!-- Child content box outside, arrow injecting -->
+      <rect x="148" y="34" width="64" height="32" rx="6" fill="#B8860B"/>
+      <text x="180" y="54" text-anchor="middle" class="mono" font-size="10" fill="#FFFFFF">Child</text>
+      <path d="M 148 50 L 130 50" fill="none" stroke="#B8860B" stroke-width="1.2" stroke-dasharray="3 2" marker-end="url(#cpArrowGold)"/>
+    </g>
+
+    <line x1="20" y1="222" x2="232" y2="222" stroke="#B8860B" stroke-width="1"/>
+    <text x="126" y="244" text-anchor="middle" class="sans" font-size="12" font-weight="600" fill="#B8860B">本仓库 slot-practice 覆盖</text>
+  </g>
+
+  <!-- Card 4: Composable -->
+  <g transform="translate(879 30)">
+    <rect x="0" y="0" width="252" height="260" rx="12" fill="#FFFFFF" stroke="#2F7A5B" stroke-width="1"/>
+    <text x="126" y="36" text-anchor="middle" class="sans" font-size="20" font-weight="700" fill="#1A1A1A">Composable</text>
+    <text x="126" y="58" text-anchor="middle" class="mono" font-size="11" letter-spacing="1" fill="#8B8680">LOGIC REUSE</text>
+
+    <!-- Diagram: two components both connect to useX() -->
+    <g transform="translate(36 84)">
+      <!-- Component A -->
+      <rect x="0" y="0" width="80" height="32" rx="6" fill="#F7F5F0" stroke="#2F7A5B" stroke-width="1"/>
+      <text x="40" y="20" text-anchor="middle" class="mono" font-size="11" fill="#1A1A1A">Comp A</text>
+      <!-- Component B -->
+      <rect x="100" y="0" width="80" height="32" rx="6" fill="#F7F5F0" stroke="#2F7A5B" stroke-width="1"/>
+      <text x="140" y="20" text-anchor="middle" class="mono" font-size="11" fill="#1A1A1A">Comp B</text>
+      <!-- Arrows down to useX -->
+      <path d="M 40 32 L 40 60 L 90 60" fill="none" stroke="#2F7A5B" stroke-width="1.2"/>
+      <path d="M 140 32 L 140 60 L 90 60" fill="none" stroke="#2F7A5B" stroke-width="1.2"/>
+      <!-- useX box -->
+      <rect x="40" y="68" width="100" height="34" rx="6" fill="#2F7A5B"/>
+      <text x="90" y="89" text-anchor="middle" class="mono" font-size="12" fill="#FFFFFF">useX()</text>
+    </g>
+
+    <line x1="20" y1="222" x2="232" y2="222" stroke="#E5E2DC" stroke-width="1"/>
+    <text x="126" y="244" text-anchor="middle" class="sans" font-size="12" fill="#8B8680">跨组件抽取响应式逻辑</text>
+  </g>
+</svg>

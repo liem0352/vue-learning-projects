@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" role="img" aria-labelledby="lpTitle lpDesc">
+  <title id="lpTitle">学习路径 - 从 Vue 3 工程基础到三个机制综合应用</title>
+  <desc id="lpDesc">五个阶段:基础、组件、路由、状态、进阶。每个阶段对应仓库里的真实子项目或共享基础。</desc>
+
+  <defs>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Roboto, Helvetica, Arial, sans-serif; }
+      .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    </style>
+    <marker id="lpArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8B8680"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="320" rx="20" fill="#F7F5F0"/>
+
+  <!-- Five stages. Layout: 5 stages x=200 each + 4 gaps x=20 + 2 margins x=60 = 1000+80+120 = 1200 -->
+
+  <!-- Stage 1: 基础 -->
+  <g transform="translate(60 50)">
+    <rect x="0" y="0" width="200" height="200" rx="12" fill="#FFFFFF" stroke="#2F7A5B" stroke-width="1"/>
+    <!-- Number circle -->
+    <circle cx="100" cy="40" r="22" fill="#2F7A5B"/>
+    <text x="100" y="47" text-anchor="middle" class="mono" font-size="16" font-weight="700" fill="#FFFFFF">01</text>
+    <!-- Title -->
+    <text x="100" y="90" text-anchor="middle" class="sans" font-size="20" font-weight="700" fill="#1A1A1A">基础</text>
+    <!-- Subtitle -->
+    <text x="100" y="116" text-anchor="middle" class="sans" font-size="13" fill="#8B8680">Vue 3 + Vite 工程</text>
+    <!-- Divider -->
+    <line x1="32" y1="136" x2="168" y2="136" stroke="#E5E2DC" stroke-width="1"/>
+    <!-- Sub-project -->
+    <text x="100" y="160" text-anchor="middle" class="mono" font-size="11" letter-spacing="1" fill="#8B8680">FOUNDATION</text>
+    <text x="100" y="182" text-anchor="middle" class="mono" font-size="12" fill="#2F7A5B">三个练习共享</text>
+  </g>
+
+  <!-- Stage 2: 组件 -->
+  <g transform="translate(280 50)">
+    <rect x="0" y="0" width="200" height="200" rx="12" fill="#FFFFFF" stroke="#2F7A5B" stroke-width="1"/>
+    <circle cx="100" cy="40" r="22" fill="#2F7A5B"/>
+    <text x="100" y="47" text-anchor="middle" class="mono" font-size="16" font-weight="700" fill="#FFFFFF">02</text>
+    <text x="100" y="90" text-anchor="middle" class="sans" font-size="20" font-weight="700" fill="#1A1A1A">组件</text>
+    <text x="100" y="116" text-anchor="middle" class="sans" font-size="13" fill="#8B8680">插槽与内容分发</text>
+    <line x1="32" y1="136" x2="168" y2="136" stroke="#E5E2DC" stroke-width="1"/>
+    <text x="100" y="160" text-anchor="middle" class="mono" font-size="11" letter-spacing="1" fill="#8B8680">SUBPROJECT</text>
+    <text x="100" y="182" text-anchor="middle" class="mono" font-size="12" fill="#B8860B">slot-practice</text>
+  </g>
+
+  <!-- Stage 3: 路由 -->
+  <g transform="translate(500 50)">
+    <rect x="0" y="0" width="200" height="200" rx="12" fill="#FFFFFF" stroke="#2F7A5B" stroke-width="1"/>
+    <circle cx="100" cy="40" r="22" fill="#2F7A5B"/>
+    <text x="100" y="47" text-anchor="middle" class="mono" font-size="16" font-weight="700" fill="#FFFFFF">03</text>
+    <text x="100" y="90" text-anchor="middle" class="sans" font-size="20" font-weight="700" fill="#1A1A1A">路由</text>
+    <text x="100" y="116" text-anchor="middle" class="sans" font-size="13" fill="#8B8680">URL 与组件映射</text>
+    <line x1="32" y1="136" x2="168" y2="136" stroke="#E5E2DC" stroke-width="1"/>
+    <text x="100" y="160" text-anchor="middle" class="mono" font-size="11" letter-spacing="1" fill="#8B8680">SUBPROJECT</text>
+    <text x="100" y="182" text-anchor="middle" class="mono" font-size="12" fill="#2F7A5B">vue-router-practice</text>
+  </g>
+
+  <!-- Stage 4: 状态 -->
+  <g transform="translate(720 50)">
+    <rect x="0" y="0" width="200" height="200" rx="12" fill="#FFFFFF" stroke="#2F7A5B" stroke-width="1"/>
+    <circle cx="100" cy="40" r="22" fill="#2F7A5B"/>
+    <text x="100" y="47" text-anchor="middle" class="mono" font-size="16" font-weight="700" fill="#FFFFFF">04</text>
+    <text x="100" y="90" text-anchor="middle" class="sans" font-size="20" font-weight="700" fill="#1A1A1A">状态</text>
+    <text x="100" y="116" text-anchor="middle" class="sans" font-size="13" fill="#8B8680">集中式状态管理</text>
+    <line x1="32" y1="136" x2="168" y2="136" stroke="#E5E2DC" stroke-width="1"/>
+    <text x="100" y="160" text-anchor="middle" class="mono" font-size="11" letter-spacing="1" fill="#8B8680">SUBPROJECT</text>
+    <text x="100" y="182" text-anchor="middle" class="mono" font-size="12" fill="#2F7A5B">vuex-practice</text>
+  </g>
+
+  <!-- Stage 5: 进阶 -->
+  <g transform="translate(940 50)">
+    <rect x="0" y="0" width="200" height="200" rx="12" fill="#FFFFFF" stroke="#B8860B" stroke-width="1"/>
+    <circle cx="100" cy="40" r="22" fill="#B8860B"/>
+    <text x="100" y="47" text-anchor="middle" class="mono" font-size="16" font-weight="700" fill="#FFFFFF">05</text>
+    <text x="100" y="90" text-anchor="middle" class="sans" font-size="20" font-weight="700" fill="#1A1A1A">进阶</text>
+    <text x="100" y="116" text-anchor="middle" class="sans" font-size="13" fill="#8B8680">三机制综合应用</text>
+    <line x1="32" y1="136" x2="168" y2="136" stroke="#E5E2DC" stroke-width="1"/>
+    <text x="100" y="160" text-anchor="middle" class="mono" font-size="11" letter-spacing="1" fill="#8B8680">COMBINE</text>
+    <text x="100" y="182" text-anchor="middle" class="mono" font-size="12" fill="#B8860B">router + vuex + slot</text>
+  </g>
+
+  <!-- Connector arrows between stages (at circle row level, y=90 from group origin = 140 abs) -->
+  <g stroke="#8B8680" stroke-width="1.5" fill="none">
+    <path d="M 268 140 L 276 140" marker-end="url(#lpArrow)"/>
+    <path d="M 488 140 L 496 140" marker-end="url(#lpArrow)"/>
+    <path d="M 708 140 L 716 140" marker-end="url(#lpArrow)"/>
+    <path d="M 928 140 L 936 140" marker-end="url(#lpArrow)"/>
+  </g>
+
+  <!-- Bottom hint -->
+  <text x="600" y="290" text-anchor="middle" class="mono" font-size="12" fill="#8B8680">每个阶段都对应仓库里的真实子项目或共享工程基础</text>
+</svg>

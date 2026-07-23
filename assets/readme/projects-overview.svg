@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" role="img" aria-labelledby="poTitle poDesc">
+  <title id="poTitle">子项目概览 - 三个 Vue 练习的目录、技术栈与关键文件</title>
+  <desc id="poDesc">三张卡片分别展示 vue-router-practice、vuex-practice、slot-practice 的目录名、技术栈、练习主题与关键文件。</desc>
+
+  <defs>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Roboto, Helvetica, Arial, sans-serif; }
+      .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="360" rx="20" fill="#F7F5F0"/>
+
+  <!-- Card 1: vue-router-practice -->
+  <g transform="translate(48 30)">
+    <rect x="0" y="0" width="348" height="300" rx="12" fill="#FFFFFF" stroke="#2F7A5B" stroke-width="1"/>
+    <!-- Header strip -->
+    <rect x="0" y="0" width="348" height="56" rx="12" fill="#2F7A5B"/>
+    <rect x="0" y="44" width="348" height="12" fill="#2F7A5B"/>
+    <rect x="16" y="14" width="34" height="22" rx="4" fill="#B8860B"/>
+    <text x="33" y="30" text-anchor="middle" class="mono" font-size="13" font-weight="700" fill="#FFFFFF">01</text>
+    <text x="60" y="32" class="sans" font-size="20" font-weight="700" fill="#FFFFFF">Vue Router</text>
+
+    <!-- Directory name -->
+    <text x="20" y="84" class="mono" font-size="13" fill="#2F7A5B">vue-router-practice/</text>
+
+    <!-- Tech stack -->
+    <text x="20" y="110" class="sans" font-size="13" fill="#8B8680">Vue 3 + Vite + Vue Router</text>
+
+    <!-- Practice topic -->
+    <text x="20" y="142" class="sans" font-size="16" font-weight="600" fill="#1A1A1A">路由配置与页面跳转</text>
+
+    <!-- Divider -->
+    <line x1="20" y1="162" x2="328" y2="162" stroke="#E5E2DC" stroke-width="1"/>
+
+    <!-- Key files -->
+    <text x="20" y="184" class="mono" font-size="11" letter-spacing="1" fill="#8B8680">KEY FILES</text>
+    <text x="20" y="208" class="mono" font-size="13" fill="#1A1A1A">router.js</text>
+    <text x="20" y="230" class="mono" font-size="13" fill="#1A1A1A">Home.vue</text>
+    <text x="20" y="252" class="mono" font-size="13" fill="#1A1A1A">About.vue</text>
+
+    <!-- Mini motif: route branch -->
+    <g transform="translate(220 200)">
+      <rect x="0" y="0" width="44" height="20" rx="4" fill="#F7F5F0" stroke="#2F7A5B" stroke-width="1"/>
+      <text x="22" y="14" text-anchor="middle" class="mono" font-size="9" fill="#1A1A1A">App</text>
+      <path d="M 22 20 L 22 30 L 10 30 L 10 40" fill="none" stroke="#8B8680" stroke-width="1"/>
+      <path d="M 22 20 L 22 30 L 34 30 L 34 40" fill="none" stroke="#8B8680" stroke-width="1"/>
+      <rect x="0" y="40" width="20" height="16" rx="3" fill="#2F7A5B"/>
+      <text x="10" y="51" text-anchor="middle" class="mono" font-size="8" fill="#FFFFFF">Home</text>
+      <rect x="24" y="40" width="20" height="16" rx="3" fill="#2F7A5B"/>
+      <text x="34" y="51" text-anchor="middle" class="mono" font-size="8" fill="#FFFFFF">About</text>
+    </g>
+  </g>
+
+  <!-- Card 2: vuex-practice -->
+  <g transform="translate(426 30)">
+    <rect x="0" y="0" width="348" height="300" rx="12" fill="#FFFFFF" stroke="#2F7A5B" stroke-width="1"/>
+    <rect x="0" y="0" width="348" height="56" rx="12" fill="#2F7A5B"/>
+    <rect x="0" y="44" width="348" height="12" fill="#2F7A5B"/>
+    <rect x="16" y="14" width="34" height="22" rx="4" fill="#B8860B"/>
+    <text x="33" y="30" text-anchor="middle" class="mono" font-size="13" font-weight="700" fill="#FFFFFF">02</text>
+    <text x="60" y="32" class="sans" font-size="20" font-weight="700" fill="#FFFFFF">Vuex</text>
+
+    <text x="20" y="84" class="mono" font-size="13" fill="#2F7A5B">vuex-practice/</text>
+    <text x="20" y="110" class="sans" font-size="13" fill="#8B8680">Vue 3 + Vite + Vuex</text>
+    <text x="20" y="142" class="sans" font-size="16" font-weight="600" fill="#1A1A1A">集中式状态管理与共享</text>
+
+    <line x1="20" y1="162" x2="328" y2="162" stroke="#E5E2DC" stroke-width="1"/>
+
+    <text x="20" y="184" class="mono" font-size="11" letter-spacing="1" fill="#8B8680">KEY FILE</text>
+    <text x="20" y="208" class="mono" font-size="13" fill="#1A1A1A">store/index.js</text>
+
+    <text x="20" y="238" class="mono" font-size="11" letter-spacing="1" fill="#8B8680">STORE PARTS</text>
+    <text x="20" y="260" class="mono" font-size="12" fill="#1A1A1A">State · Getters</text>
+    <text x="20" y="280" class="mono" font-size="12" fill="#1A1A1A">Mutations · Actions</text>
+
+    <!-- Mini motif: state tree -->
+    <g transform="translate(232 200)">
+      <rect x="14" y="0" width="64" height="18" rx="3" fill="#F7F5F0" stroke="#2F7A5B" stroke-width="1"/>
+      <text x="46" y="13" text-anchor="middle" class="mono" font-size="8" fill="#1A1A1A">store</text>
+      <path d="M 46 18 L 46 28" stroke="#8B8680" stroke-width="1"/>
+      <path d="M 10 28 L 82 28" stroke="#8B8680" stroke-width="1"/>
+      <path d="M 10 28 L 10 36" stroke="#8B8680" stroke-width="1"/>
+      <path d="M 46 28 L 46 36" stroke="#8B8680" stroke-width="1"/>
+      <path d="M 82 28 L 82 36" stroke="#8B8680" stroke-width="1"/>
+      <rect x="0" y="36" width="20" height="14" rx="3" fill="#2F7A5B"/>
+      <text x="10" y="46" text-anchor="middle" class="mono" font-size="7" fill="#FFFFFF">St</text>
+      <rect x="36" y="36" width="20" height="14" rx="3" fill="#2F7A5B"/>
+      <text x="46" y="46" text-anchor="middle" class="mono" font-size="7" fill="#FFFFFF">Gt</text>
+      <rect x="72" y="36" width="20" height="14" rx="3" fill="#2F7A5B"/>
+      <text x="82" y="46" text-anchor="middle" class="mono" font-size="7" fill="#FFFFFF">Ac</text>
+    </g>
+  </g>
+
+  <!-- Card 3: slot-practice -->
+  <g transform="translate(804 30)">
+    <rect x="0" y="0" width="348" height="300" rx="12" fill="#FFFFFF" stroke="#B8860B" stroke-width="1"/>
+    <rect x="0" y="0" width="348" height="56" rx="12" fill="#B8860B"/>
+    <rect x="0" y="44" width="348" height="12" fill="#B8860B"/>
+    <rect x="16" y="14" width="34" height="22" rx="4" fill="#2F7A5B"/>
+    <text x="33" y="30" text-anchor="middle" class="mono" font-size="13" font-weight="700" fill="#FFFFFF">03</text>
+    <text x="60" y="32" class="sans" font-size="20" font-weight="700" fill="#FFFFFF">Slot</text>
+
+    <text x="20" y="84" class="mono" font-size="13" fill="#B8860B">slot-practice/</text>
+    <text x="20" y="110" class="sans" font-size="13" fill="#8B8680">Vue 3 (插槽练习/)</text>
+    <text x="20" y="142" class="sans" font-size="16" font-weight="600" fill="#1A1A1A">默认 / 具名 / 作用域插槽</text>
+
+    <line x1="20" y1="162" x2="328" y2="162" stroke="#E5E2DC" stroke-width="1"/>
+
+    <text x="20" y="184" class="mono" font-size="11" letter-spacing="1" fill="#8B8680">KEY FILES</text>
+    <text x="20" y="208" class="mono" font-size="13" fill="#1A1A1A">Dparent.vue · Dslot.vue</text>
+    <text x="20" y="230" class="mono" font-size="13" fill="#1A1A1A">CParent.vue</text>
+    <text x="20" y="252" class="mono" font-size="13" fill="#1A1A1A">Cslot.vue · Cslot2.vue</text>
+
+    <!-- Mini motif: nested slot -->
+    <g transform="translate(232 200)">
+      <rect x="0" y="0" width="56" height="44" rx="4" fill="#F7F5F0" stroke="#2F7A5B" stroke-width="1"/>
+      <text x="28" y="12" text-anchor="middle" class="mono" font-size="8" fill="#1A1A1A">Parent</text>
+      <rect x="8" y="18" width="40" height="18" rx="3" fill="none" stroke="#B8860B" stroke-width="1" stroke-dasharray="3 2"/>
+      <text x="28" y="30" text-anchor="middle" class="mono" font-size="7" fill="#B8860B">slot</text>
+      <rect x="64" y="14" width="32" height="18" rx="3" fill="#B8860B"/>
+      <text x="80" y="26" text-anchor="middle" class="mono" font-size="7" fill="#FFFFFF">Child</text>
+      <path d="M 64 23 L 56 23" stroke="#8B8680" stroke-width="1" stroke-dasharray="2 2"/>
+    </g>
+  </g>
+</svg>
