@@ -4,6 +4,8 @@
 
 > Vue Router · Vuex · Slot - 用三个独立可运行的子项目,把 Vue 3 的路由、状态管理、插槽三大核心知识点各自练透。
 
+<p align="center"><a href="https://liem0352.github.io/vue-learning-projects/"><img src="https://img.shields.io/badge/Live_Demo-在线体验-2F7A5B?style=for-the-badge&logo=github&logoColor=white" alt="Live Demo"></a></p>
+
 ---
 
 ## 三个练习,三套真实文件

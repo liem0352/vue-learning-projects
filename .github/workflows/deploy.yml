@@ -1,0 +1,65 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # vue-router-practice: 标准 Vite 工程,构建后产物放到 /vue-router/
+      - name: Build vue-router-practice
+        run: |
+          cd vue-router-practice
+          npm install --no-audit --no-fund
+          npm run build -- --base=/vue-learning-projects/vue-router/
+
+      # vuex-practice: 标准 Vite 工程,构建后产物放到 /vuex/
+      - name: Build vuex-practice
+        run: |
+          cd vuex-practice
+          npm install --no-audit --no-fund
+          npm run build -- --base=/vue-learning-projects/vuex/
+
+      # slot-practice 仅为 .vue 源码片段,无可构建工程,使用静态说明页
+      - name: Assemble site
+        run: |
+          mkdir -p site/vue-router site/vuex site/slot
+          cp -r vue-router-practice/dist/. site/vue-router/
+          cp -r vuex-practice/dist/. site/vuex/
+          cp index-landing.html site/index.html
+          cp slot-landing.html site/slot/index.html
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

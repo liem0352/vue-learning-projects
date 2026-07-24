@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vue 学习项目合集</title>
+<style>
+  :root{
+    --bg:#F5F2EC;
+    --surface:#FFFFFF;
+    --primary:#2F7A5B;
+    --primary-dark:#245F49;
+    --text:#1F2A24;
+    --text-muted:#5C6660;
+    --border:#E0DBD0;
+    --shadow:0 1px 2px rgba(31,42,36,.04),0 8px 24px rgba(31,42,36,.06);
+    --shadow-hover:0 2px 4px rgba(31,42,36,.06),0 18px 42px rgba(47,122,91,.14);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  .container{max-width:1080px;margin:0 auto;padding:0 24px}
+  header.hero{padding:88px 0 56px;text-align:center}
+  .eyebrow{
+    display:inline-block;font-size:13px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--primary);font-weight:600;margin-bottom:20px;
+  }
+  h1{
+    font-size:clamp(32px,6vw,52px);line-height:1.15;font-weight:700;
+    margin:0 0 20px;letter-spacing:-.01em;
+  }
+  .lede{font-size:18px;color:var(--text-muted);max-width:640px;margin:0 auto}
+  .accent-bar{width:56px;height:3px;background:var(--primary);border-radius:2px;margin:28px auto 0}
+  .section-title{
+    font-size:14px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--text-muted);font-weight:600;text-align:center;margin:16px 0 40px;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:24px;
+    padding-bottom:72px;
+  }
+  .card{
+    background:var(--surface);border:1px solid var(--border);border-radius:14px;
+    padding:32px 28px;text-decoration:none;color:inherit;
+    display:flex;flex-direction:column;box-shadow:var(--shadow);
+    transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+    position:relative;overflow:hidden;
+  }
+  .card::before{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+    background:var(--primary);transform:scaleY(0);transform-origin:top;
+    transition:transform .25s ease;
+  }
+  .card:hover,.card:focus-visible{
+    transform:translateY(-4px);box-shadow:var(--shadow-hover);
+    border-color:transparent;outline:none;
+  }
+  .card:hover::before,.card:focus-visible::before{transform:scaleY(1)}
+  .card-index{font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--primary);margin-bottom:14px}
+  .card-title{font-size:22px;font-weight:700;margin:0 0 10px}
+  .card-desc{font-size:15px;color:var(--text-muted);margin:0 0 20px;flex:1}
+  .tags{margin-bottom:20px}
+  .tag{
+    display:inline-block;font-size:12px;font-weight:500;color:var(--text-muted);
+    background:var(--bg);border:1px solid var(--border);
+    padding:4px 10px;border-radius:20px;margin:0 6px 6px 0;
+  }
+  .card-link{font-size:14px;font-weight:600;color:var(--primary);display:inline-flex;align-items:center;gap:8px}
+  .card-link .arrow{transition:transform .2s ease}
+  .card:hover .card-link .arrow{transform:translateX(4px)}
+  .live-note{
+    margin:0 auto 80px;max-width:720px;text-align:center;
+    background:var(--surface);border:1px solid var(--border);
+    border-left:3px solid var(--primary);border-radius:12px;padding:24px 28px;
+  }
+  .live-note p{margin:0;font-size:14px;color:var(--text-muted);line-height:1.7}
+  .live-note strong{color:var(--text)}
+  .live-note code{font-family:"SFMono-Regular",Consolas,Menlo,monospace;font-size:13px;color:var(--primary-dark)}
+  footer.site-foot{border-top:1px solid var(--border);padding:28px 0;text-align:center;font-size:13px;color:var(--text-muted)}
+  footer.site-foot a{color:var(--primary);text-decoration:none;font-weight:600}
+  footer.site-foot a:hover{text-decoration:underline}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.card:hover{transform:none}}
+  @media (max-width:600px){header.hero{padding:56px 0 40px}.grid{gap:16px;padding-bottom:48px}.card{padding:24px 22px}}
+</style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <span class="eyebrow">Vue 3 · 学习仓库</span>
+      <h1>Vue 学习项目合集</h1>
+      <p class="lede">用三个独立子项目,把 Vue 3 的路由、状态管理、插槽三大核心知识点各自练透。</p>
+      <div class="accent-bar" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <p class="section-title">在线 Demo · 点击进入</p>
+    <section class="grid">
+      <a class="card" href="./vue-router/">
+        <span class="card-index">01 / 路由</span>
+        <h2 class="card-title">Vue Router 路由练习</h2>
+        <p class="card-desc">URL 与组件的映射、声明式与编程式跳转、动态路由与嵌套路由,本质是一棵路由树。</p>
+        <div class="tags"><span class="tag">Vue Router 4</span><span class="tag">Vite</span></div>
+        <span class="card-link">进入练习 <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+      <a class="card" href="./vuex/">
+        <span class="card-index">02 / 状态</span>
+        <h2 class="card-title">Vuex 状态管理练习</h2>
+        <p class="card-desc">State / Getters / Mutations / Actions 单向数据流,跨组件共享数据不再靠 props 逐层传递。</p>
+        <div class="tags"><span class="tag">Vuex 4</span><span class="tag">Vite</span></div>
+        <span class="card-link">进入练习 <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+      <a class="card" href="./slot/">
+        <span class="card-index">03 / 插槽</span>
+        <h2 class="card-title">Slot 插槽练习</h2>
+        <p class="card-desc">默认插槽、具名插槽、作用域插槽,组件的注入点与内容分发。源码片段展示与原理说明。</p>
+        <div class="tags"><span class="tag">默认插槽</span><span class="tag">具名插槽</span><span class="tag">作用域插槽</span></div>
+        <span class="card-link">查看说明 <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+    </section>
+
+    <div class="live-note">
+      <p><strong>Live Demo 说明:</strong>本页由 GitHub Actions 自动构建并部署到 GitHub Pages,每次推送到 <code>main</code> 分支即触发更新。Vue Router 与 Vuex 两个子项目为可独立运行的 Vite 工程,构建产物原样部署;Slot 练习为 <code>.vue</code> 源码片段,以静态说明页形式展示。</p>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="container">源码仓库:<a href="https://github.com/liem0352/vue-learning-projects">liem0352/vue-learning-projects</a></div>
+  </footer>
+</body>
+</html>
